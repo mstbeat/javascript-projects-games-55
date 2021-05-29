@@ -1,8 +1,9 @@
-let message;
-console.log(message);
-message = null;
-if(true){
-  let message = "updated message";
-  console.log(message);
-}
-console.log(message);
+let myNum = "100";
+myNum = Number(myNum);
+console.log(myNum);
+console.log(typeof myNum);
+
+
+let a = Number("5");
+let b = Number("10");
+console.log(a + b);
