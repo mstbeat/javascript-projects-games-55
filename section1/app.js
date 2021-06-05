@@ -1,9 +1,9 @@
-let myNum = "100";
-myNum = Number(myNum);
-console.log(myNum);
-console.log(typeof myNum);
+const myArray = ["a","hello",4,8,2,"world","java","course",99,1];
+const myArray2 = [5,341,632,12,8,130,44];
 
+let result = myArray2.filter(function(num){
+  console.log(num);
+  return num > 75;
+})
 
-let a = Number("5");
-let b = Number("10");
-console.log(a + b);
+console.log(result);
