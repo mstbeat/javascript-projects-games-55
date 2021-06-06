@@ -1,9 +1,19 @@
-const myArray = ["a","hello",4,8,2,"world","java","course",99,1];
-const myArray2 = [5,341,632,12,8,130,44];
+const obj = {a:1,b:2,c:3};
+console.log(obj);
+for(let prop in obj){
+  console.log(prop,obj[prop]);
+}
 
-let result = myArray2.filter(function(num){
-  console.log(num);
-  return num > 75;
+const arr = ['a','b','c'];
+for(let w = 0; w < arr.length; w++){
+  console.log(w,arr[w]);
+}
+
+for(el in arr){
+  console.log(el,arr[el]);
+}
+
+arr.forEach(function(el,index,array){
+  console.log(array);
+  console.log(index,el);
 })
-
-console.log(result);
