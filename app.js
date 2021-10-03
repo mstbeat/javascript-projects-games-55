@@ -1,10 +1,15 @@
-console.log(document.getElementById('myID'));
-console.log(document.querySelector('#myID'));
-console.log(document.querySelector('.first'));
-console.log(document.querySelector('div'));
+let eleList = document.getElementsByClassName('first');
+eleList = document.getElementsByTagName('span');
+eleList = document.querySelectorAll('.first');
+for(let i=0;i<eleList.length;i++){
+  let el = eleList[i];
+  console.log(el);
+  eleList[i].textContent = (i + 1) + ' updated';
+}
 
-document.querySelector('span').style.backgroundColor = 'yellow';
-document.querySelector('.first span').style.backgroundColor = 'blue';
-document.querySelector('li:last-child').style.backgroundColor = 'green';
-document.querySelector('li:first-child').style.backgroundColor = 'red';
-document.querySelector('li:nth-child(4)').style.backgroundColor = 'purple';
+eleList.forEach(function(el,index) {
+  console.log(index);
+  el.textContent = `${index} : updated`;
+  el.style.backgroundColor = 'red';
+});
+console.log(eleList);
